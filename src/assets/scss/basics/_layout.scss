@@ -1,0 +1,25 @@
+.main-container {
+    display: grid;
+    column-gap: 1.6rem;
+
+    grid-template-columns: 0px 1fr 0px;
+
+    >* {
+        grid-column: 2;
+    }
+
+    @include for-narrow-layout {
+        grid-template-columns:
+            1fr minmax(auto, 460px) 1fr;
+    }
+
+    @include for-normal-layout {
+        grid-template-columns:
+            1fr minmax(auto, 720px) 1fr;
+    }
+
+    @include for-wide-layout {
+        grid-template-columns:
+            1fr minmax(auto, 960px) 1fr;
+    }
+}

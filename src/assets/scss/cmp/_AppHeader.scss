@@ -1,0 +1,20 @@
+.app-header {
+
+    box-shadow: 0px 1px 6px 0px rgba(0, 0, 0, 16%);
+    padding: 16px;
+
+    .logo {
+        gap: 10px;
+        margin-bottom:5px;
+    }
+
+    .change-data {
+        justify-content: space-between
+    }
+
+    @include for-mobile-layout {
+        flex-direction: column;
+        width: fit-content;
+        gap: 20px;
+    }
+}
