@@ -7,6 +7,7 @@ function App() {
   return (
     <Router>
       <div className="main-container">
+        <AppHeader />
         <main>
           <Home />
         </main>

@@ -20,6 +20,6 @@
 
     @include for-wide-layout {
         grid-template-columns:
-            1fr minmax(auto, 960px) 1fr;
+            1fr minmax(auto, 1400px) 1fr;
     }
 }

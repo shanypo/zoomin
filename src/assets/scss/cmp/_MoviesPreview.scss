@@ -1,9 +1,29 @@
-.time-to-show {
-    gap: 15px;
-    padding-inline-start: 15px;
-    margin-bottom: 10px;
+.main-movies-container {
+    gap: 10px;
 
-    .active {
-        text-decoration: underline;
+    .movies-preview {
+        background-color: #282727;
+        border-radius: 3px;
+        padding: 10px;
+        gap: 10px;
+
+        h4 {
+            margin-bottom: 5px;
+        }
+
+        svg {
+            color: #edec51;
+        }
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    @include for-wide-layout {
+
+        p {
+            font-size: 16px;
+        }
     }
 }

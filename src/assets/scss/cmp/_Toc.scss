@@ -1,0 +1,26 @@
+.main-toc {
+    gap: 10px;
+    background-color: #282727;
+    border-radius: 3px;
+    padding: 10px;
+
+    .toc-main-title {
+        gap: 5px;
+        margin-bottom: 5px;
+    }
+
+    svg {
+        color: #edec51;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    @include for-wide-layout {
+
+        p {
+            font-size: 16px;
+        }
+    }
+}
