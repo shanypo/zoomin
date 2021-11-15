@@ -3,6 +3,7 @@ import { moviesService } from "../services/moviesService";
 import { Toc } from "../cmp/Toc";
 import { MoviesPreview } from "../cmp/MoviesPreview";
 import { IoMdFilm } from "react-icons/io";
+import loading from "../assets/img/loading.svg";
 
 export const Home = () => {
   const [movies, setMovies] = useState();
@@ -16,7 +17,12 @@ export const Home = () => {
     setMovies(moviesData);
   };
 
-  if (!movies) return <p>Loading...</p>;
+  if (!movies)
+    return (
+      <p>
+        <img src={loading} alt="loading" />
+      </p>
+    );
   return (
     <div className="home grid">
       <div className="main-toc flex column">
