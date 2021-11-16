@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/zoomin/static/css/main.620cc6a5.chunk.css",
-    "main.js": "/zoomin/static/js/main.f6838688.chunk.js",
-    "main.js.map": "/zoomin/static/js/main.f6838688.chunk.js.map",
+    "main.js": "/zoomin/static/js/main.d0a0862f.chunk.js",
+    "main.js.map": "/zoomin/static/js/main.d0a0862f.chunk.js.map",
     "runtime-main.js": "/zoomin/static/js/runtime-main.b9fcf114.js",
     "runtime-main.js.map": "/zoomin/static/js/runtime-main.b9fcf114.js.map",
     "static/js/2.a3c12d73.chunk.js": "/zoomin/static/js/2.a3c12d73.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.b9fcf114.js",
     "static/js/2.a3c12d73.chunk.js",
     "static/css/main.620cc6a5.chunk.css",
-    "static/js/main.f6838688.chunk.js"
+    "static/js/main.d0a0862f.chunk.js"
   ]
 }
