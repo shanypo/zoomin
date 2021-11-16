@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
 import { moviesService } from "../services/moviesService";
 import { Toc } from "../cmp/Toc";
-import { MoviesPreview } from "../cmp/MoviesPreview";
+import { MovieDetails } from "../cmp/MovieDetails";
 import { IoMdFilm } from "react-icons/io";
 import loading from "../assets/img/loading.svg";
 
 export const Home = () => {
   const [movies, setMovies] = useState();
-
+  const [selectedMovie, setSelectedMovie] = useState();
   useEffect(() => {
     setMoviesData();
   }, []);
@@ -15,6 +15,10 @@ export const Home = () => {
   const setMoviesData = async () => {
     const moviesData = await moviesService.getData();
     setMovies(moviesData);
+  };
+
+  const onSelectedMovie = (selectedtMovie) => {
+    setSelectedMovie(selectedtMovie);
   };
 
   if (!movies)
@@ -30,13 +34,12 @@ export const Home = () => {
           <IoMdFilm /> Movies
         </h4>
         {movies.map((movie, idx) => (
-          <Toc movie={movie} key={idx} />
+          <Toc movie={movie} key={idx} onSelectedMovie={onSelectedMovie} />
         ))}
       </div>
       <div className="main-movies-container flex column">
-        {movies.map((movie, idx) => (
-          <MoviesPreview movie={movie} key={idx} />
-        ))}
+        {selectedMovie && <MovieDetails movie={selectedMovie} />}
+        {!selectedMovie && <p>No selected movie</p>}
       </div>
     </div>
   );
